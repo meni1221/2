@@ -1,7 +1,7 @@
 //Task 1
 
-const filterAndSortEvenNumbers = (x) => x.filter((x) => x % 2 === 0).sort();
-console.log(filterAndSortEvenNumbers([3, 51, 3, 27, 22, 10, 32]));
+const filterAndSortEvenNumbers = (x) => x.filter((x) => x % 2 === 0).sort((a,b)=>a-b);
+console.log(filterAndSortEvenNumbers([12,112,4,2,1]));
 
 //Task 2
 const removeDuplicates = (x) => {
