@@ -1,7 +1,7 @@
 //Task 1
 
-const filterAndSortEvenNumbers = (x) => x.filter((x) => x % 2 === 0).sort((a,b)=>a-b);
-console.log(filterAndSortEvenNumbers([12,112,4,2,1]));
+const filterAndSortEvenNumbers = (x) => x.filter((x) => x % 2 === 0).sort((a, b) => a - b);
+console.log(filterAndSortEvenNumbers([12, 112, 4, 2, 1]));
 
 //Task 2
 const removeDuplicates = (x) => {
@@ -25,38 +25,38 @@ const capitalizeFirstLetter = (str) => {
       let strResult = arr[i];
       const first = strResult[0].toUpperCase();
       const rest = strResult.slice(1);
-      let newStr = first+rest;
-      arr[i] = newStr; 
+      let newStr = first + rest;
+      arr[i] = newStr;
     }
   }
-  return arr.join(" "); 
+  return arr.join(" ");
 };
 console.log(capitalizeFirstLetter("my name. is. meni"));
 
 //Task 4 
-const saveTasks = (arr)=>{
+const saveTasks = (arr) => {
   localStorage.setItem("tasks", JSON.stringify(arr))
 }
-saveTasks([0,1,2,3,4,5,6,7,8,9,10]);
+saveTasks([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
-const loadTasks = ()=>{
+const loadTasks = () => {
   return JSON.parse(localStorage.getItem("tasks"))
 }
 console.log(loadTasks());
 
-const addTask = (task)=>{
+const addTask = (task) => {
   const tasks = JSON.parse(localStorage.getItem("tasks"))
   tasks.push(task)
-  localStorage.setItem("tasks",JSON.stringify(tasks))
+  localStorage.setItem("tasks", JSON.stringify(tasks))
 }
 
 addTask(37)
 console.log(loadTasks());
 
-const removeTask = (task)=>{
+const removeTask = (task) => {
   const tasks = JSON.parse(localStorage.getItem("tasks"))
   const newTasks = tasks.filter(t => t !== task)
-  localStorage.setItem("tasks",JSON.stringify(newTasks))
+  localStorage.setItem("tasks", JSON.stringify(newTasks))
 }
 
 removeTask(4)
